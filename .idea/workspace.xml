@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bc4c9277-2932-4def-aec5-1cb93a30a44b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/back-end">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/back-end2">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/back-end">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="code-challenge" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="code-challenge" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code-challenge" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aeBGueWHhFv6AR7LBW9NKyTgT8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/back-end" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/back-end2" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc4c9277-2932-4def-aec5-1cb93a30a44b" name="Default Changelist" comment="" />
+      <created>1587086086097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587086086097</updated>
+      <workItem from="1587086091181" duration="241000" />
+      <workItem from="1587086343016" duration="876000" />
+      <workItem from="1587087229435" duration="629000" />
+      <workItem from="1587087870778" duration="3158000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="774" y="285" width="1751" height="880" key="#Project_Structure" timestamp="1587090603608">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="774" y="285" width="1751" height="880" key="#Project_Structure/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587090603608" />
+    <state x="1178" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587086602029">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1178" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587086602029" />
+    <state x="1464" y="476" width="735" height="513" key="FileChooserDialogImpl" timestamp="1587090579070">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1464" y="476" width="735" height="513" key="FileChooserDialogImpl/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587090579070" />
+    <state x="1300" y="431" width="819" height="602" key="NewModule_or_Project.wizard" timestamp="1587088256638">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1300" y="431" width="819" height="602" key="NewModule_or_Project.wizard/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587088256638" />
+    <state x="1203" y="310" width="1024" height="845" key="SettingsEditor" timestamp="1587090427179">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1203" y="310" width="1024" height="845" key="SettingsEditor/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587090427179" />
+    <state x="1376" y="560" key="com.intellij.ide.util.TipDialog" timestamp="1587087876829">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1376" y="560" key="com.intellij.ide.util.TipDialog/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587087876829" />
+    <state x="1029" y="275" width="1372" height="915" key="new project wizard" timestamp="1587087572526">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="1029" y="275" width="1372" height="915" key="new project wizard/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587087572526" />
+  </component>
+</project>
