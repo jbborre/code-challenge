@@ -1,4 +1,4 @@
-package com.code.challenge.Application
+package com.code.challenge
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
