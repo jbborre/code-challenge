@@ -1,0 +1,35 @@
+.search_page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.search_bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 1em;
+    align-content: space-evenly;
+    max-width: 500px;
+    flex-grow: 1;
+}
+
+.search_input_wrapper {
+    padding: 5px;
+    margin: auto;
+}
+
+.search_input {
+    max-width: 200px;
+    min-width: auto;
+    flex-shrink: 1;
+    margin: auto;
+    flex-grow: 1;
+}
+
+.search_button {
+    max-width: 75px;
+    min-width: 50px;
+    margin: auto;
+}
