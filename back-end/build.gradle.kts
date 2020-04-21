@@ -1,8 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-//    `java-library`
-//    base
     id("org.springframework.boot") version "2.2.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
     kotlin("jvm") version "1.3.70"
@@ -28,6 +27,11 @@ configurations {
     implementation {
         resolutionStrategy.failOnVersionConflict()
     }
+}
+
+
+springBoot {
+    mainClassName = "com.code.challenge.Application"
 }
 
 tasks.withType<KotlinCompile> {
