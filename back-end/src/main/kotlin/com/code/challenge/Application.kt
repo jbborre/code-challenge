@@ -9,7 +9,7 @@ class Application {
 
     companion object {
         @JvmStatic
-        open fun main(args: Array<String>) {
+        fun main(args: Array<String>) {
             runApplication<Application>(*args)
         }
     }

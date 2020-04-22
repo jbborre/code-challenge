@@ -1,0 +1,36 @@
+version: "3.3"
+services:
+  web:
+    image: code.challenge/code-challenge-web:1.0.0
+    user: "node"
+    build:
+      context: front-end
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    command: npm start
+    restart: on-failure
+    volumes:
+      - './front-end:/app'
+      - '/app/node_modules'
+    environment:
+      - NODE_ENV=production
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    networks:
+      - challenge
+  backend:
+    build:
+      context: back-end
+      dockerfile: Dockerfile
+    restart: on-failure
+    image: code.challenge/code-challenge:1.0.0
+    ports:
+      - "8080:8080"
+    networks:
+      - challenge
+networks:
+  challenge:

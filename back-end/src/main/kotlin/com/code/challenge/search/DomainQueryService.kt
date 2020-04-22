@@ -5,7 +5,8 @@ interface DomainQueryService {
 }
 
 data class Result(
-        val domains: List<Domain>
+        val domains: List<Domain>,
+        val total: Int
 )
 data class Domain(
         val domain: String,
