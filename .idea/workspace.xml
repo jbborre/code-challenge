@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc4c9277-2932-4def-aec5-1cb93a30a44b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/jms/CandidateConsumerKt.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/DomainQueryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/DomainQueryService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/Config.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/DomainQueryServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/DomainQueryServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/SearchController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/kotlin/com/code/challenge/search/SearchController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/.env" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SearchResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/Search.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/Search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/pages/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/pages/Search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +45,7 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -71,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA&#10;JSON" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -81,18 +74,86 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-end" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.code.challenge" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.code.challenge.jms" />
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/back-end2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/front-end" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.TestKafka.test kafa publish">
+    <configuration name="TestKafka" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/back-end" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.code.challenge.TestKafka&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestKafka.test kafa publish" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/back-end" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.code.challenge.TestKafka.test kafa publish&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestKafka.test kafka using spring" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/back-end" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.code.challenge.TestKafka.test kafka using spring&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="code-challenge.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.code.challenge.Application" />
@@ -100,6 +161,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TestKafka.test kafa publish" />
+        <item itemvalue="Gradle.TestKafka.test kafka using spring" />
+        <item itemvalue="Gradle.TestKafka" />
+        <item itemvalue="Java Scratch.Scratch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -117,7 +186,9 @@
       <workItem from="1587087870778" duration="6405000" />
       <workItem from="1587144085082" duration="12815000" />
       <workItem from="1587407793566" duration="2918000" />
-      <workItem from="1587411282049" duration="27312000" />
+      <workItem from="1587411282049" duration="27853000" />
+      <workItem from="1587605444628" duration="22892000" />
+      <workItem from="1587691774073" duration="4307000" />
     </task>
     <servers />
   </component>
@@ -138,9 +209,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="642" y="354" width="626" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587497970408" />
-    <state x="1494" y="451" width="442" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1587435464630">
-      <screen x="0" y="27" width="5360" height="1413" />
+    <state x="959" y="451" width="323" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1587609064638">
+      <screen x="0" y="27" width="3440" height="1413" />
     </state>
+    <state x="959" y="451" width="323" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587609064638" />
     <state x="1494" y="451" width="442" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.5360.1413@0.27.5360.1413" timestamp="1587435464630" />
     <state x="643" y="289" width="624" height="526" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587411210842">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -154,10 +226,38 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="1456" y="374" width="664" height="717" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587092074153" />
+    <state x="440" y="100" width="1029" height="904" key="CommitChangelistDialog2" timestamp="1587653279730">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="440" y="100" width="1029" height="904" key="CommitChangelistDialog2/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587653279730" />
     <state x="1464" y="476" width="735" height="513" key="FileChooserDialogImpl" timestamp="1587090579070">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="1464" y="476" width="735" height="513" key="FileChooserDialogImpl/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587090579070" />
+    <state width="1874" height="406" key="GridCell.Tab.0.bottom" timestamp="1587694058125">
+      <screen x="3440" y="168" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="394" key="GridCell.Tab.0.bottom/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587673419011" />
+    <state width="3394" height="558" key="GridCell.Tab.0.bottom/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587614425385" />
+    <state width="1874" height="406" key="GridCell.Tab.0.bottom/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587694058125" />
+    <state width="1874" height="406" key="GridCell.Tab.0.center" timestamp="1587694058125">
+      <screen x="3440" y="168" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="394" key="GridCell.Tab.0.center/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587673419011" />
+    <state width="3394" height="558" key="GridCell.Tab.0.center/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587614425385" />
+    <state width="1874" height="406" key="GridCell.Tab.0.center/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587694058125" />
+    <state width="1874" height="406" key="GridCell.Tab.0.left" timestamp="1587694058125">
+      <screen x="3440" y="168" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="394" key="GridCell.Tab.0.left/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587673419011" />
+    <state width="3394" height="558" key="GridCell.Tab.0.left/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587614425385" />
+    <state width="1874" height="406" key="GridCell.Tab.0.left/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587694058125" />
+    <state width="1874" height="406" key="GridCell.Tab.0.right" timestamp="1587694058125">
+      <screen x="3440" y="168" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="394" key="GridCell.Tab.0.right/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587673419011" />
+    <state width="3394" height="558" key="GridCell.Tab.0.right/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587614425385" />
+    <state width="1874" height="406" key="GridCell.Tab.0.right/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587694058125" />
     <state x="1300" y="431" width="819" height="602" key="NewModule_or_Project.wizard" timestamp="1587088256638">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -181,11 +281,12 @@
     </state>
     <state x="1488" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587178952132" />
     <state x="2319" y="652" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.5360.1413@0.27.5360.1413" timestamp="1587438063366" />
-    <state x="762" y="261" width="588" height="584" key="find.popup" timestamp="1587500777343">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="3693" y="408" width="1097" height="599" key="find.popup" timestamp="1587695558255">
+      <screen x="3440" y="168" width="1920" height="1080" />
     </state>
     <state x="762" y="261" width="588" height="584" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587500777343" />
     <state x="1365" y="341" width="710" height="783" key="find.popup/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587175390451" />
+    <state x="3693" y="408" width="1097" height="599" key="find.popup/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587695558255" />
     <state x="1029" y="275" width="1372" height="915" key="new project wizard" timestamp="1587087572526">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -194,10 +295,13 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="1384" y="343" key="run.anything.popup/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587178722212" />
-    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587503827771">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="4063" y="404" width="672" height="697" key="search.everywhere.popup" timestamp="1587694549709">
+      <screen x="3440" y="168" width="1920" height="1080" />
     </state>
+    <state x="623" y="257" width="672" height="679" key="search.everywhere.popup/0.27.1920.1053/3440.168.1920.1080@0.27.1920.1053" timestamp="1587672756363" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587503827771" />
+    <state x="1116" y="336" width="1204" height="910" key="search.everywhere.popup/0.27.3440.1413/3440.168.1920.1080@0.27.3440.1413" timestamp="1587616702884" />
+    <state x="4063" y="404" width="672" height="697" key="search.everywhere.popup/0.27.3440.1413/3440.168.1920.1080@3440.168.1920.1080" timestamp="1587694549709" />
     <state x="1739" y="336" width="1876" height="910" key="search.everywhere.popup/0.27.5360.1413@0.27.5360.1413" timestamp="1587435348758" />
     <state x="685" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587499201129">
       <screen x="0" y="27" width="1920" height="1053" />

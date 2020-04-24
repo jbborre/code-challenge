@@ -23,14 +23,64 @@ services:
     networks:
       - challenge
   backend:
+    hostname: backend
     build:
       context: back-end
       dockerfile: Dockerfile
     restart: on-failure
     image: code.challenge/code-challenge:1.0.0
     ports:
-      - "8080:8080"
+      - 8080:8080
     networks:
       - challenge
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    restart: always
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - challenge
+  kafka:
+    hostname: kafka
+    image: 'bitnami/kafka:latest'
+    depends_on:
+      - zookeeper
+    restart: always
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,PLAINTEXT_HOST://:29092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+    ports:
+      - '9092:9092'
+      - '29092:29092'
+    networks:
+      - challenge
+#  kafka:
+#    image: wurstmeister/kafka
+#    hostname: kafka
+#    environment:
+#      KAFKA_CREATE_TOPICS: "candidate-update:1:1,transaction-log:1:1"
+#      KAFKA_LISTENERS: OUTSIDE://kafka:9092,INSIDE://localhost:9093
+#      KAFKA_ADVERTISED_LISTENERS: OUTSIDE://kafka:9092,INSIDE://localhost:9093
+#      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: OUTSIDE:PLAINTEXT,INSIDE:PLAINTEXT
+#      KAFKA_INTER_BROKER_LISTENER_NAME: OUTSIDE
+#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+#    ports:
+#      - 9092:9092
+#    networks:
+#      - challenge
+#    depends_on:
+#      - zookeeper
+#  zookeeper:
+#    image: zookeeper:3.6
+#    restart: always
+#    ports:
+#      - 2181:2181
+#    networks:
+#      - challenge
 networks:
   challenge:
+    driver: bridge
