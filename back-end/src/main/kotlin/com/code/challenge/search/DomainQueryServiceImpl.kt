@@ -20,6 +20,6 @@ class DomainQueryServiceImpl(
                         "zone" to "com",
                         "limit" to "10"
                 ))
-        return Result(domains = result.domains.sortedBy { it.domain })
+        return Result(domains = result.domains.sortedBy { it.domain }, total = result.total)
     }
 }
