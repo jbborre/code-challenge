@@ -3,7 +3,7 @@ package com.code.challenge.jms
 data class CandidateModel(
         val event: Event,
         val recordId: Long,
-        val name: String
+        val name: String? = null
 )
 
 enum class Event{

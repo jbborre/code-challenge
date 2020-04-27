@@ -1,5 +1,8 @@
 package com.code.challenge
 
+import com.code.challenge.jms.CandidateModel
+import com.code.challenge.jms.Event
+import com.google.gson.Gson
 import mu.KotlinLogging
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.producer.KafkaProducer
@@ -9,6 +12,8 @@ import org.apache.kafka.clients.producer.ProducerRecord
 import org.apache.kafka.common.serialization.*
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Qualifier
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory
 import org.springframework.kafka.core.DefaultKafkaProducerFactory
 import org.springframework.kafka.core.KafkaTemplate
@@ -23,7 +28,11 @@ import java.util.concurrent.TimeUnit
 
 private val LOGGER = KotlinLogging.logger {}
 
-class TestKafka {
+@SpringBootTest
+class TestKafka(
+        @Qualifier("candidateTemplate")
+        val candidateTemplate: KafkaTemplate<String, String>
+) {
 
     private fun createProducer(): Producer<Long?, String?>? {
         val props = Properties()
@@ -34,7 +43,28 @@ class TestKafka {
         return KafkaProducer(props)
     }
 
-//    @Test
+    @Test
+    fun `publish candidates`() {
+        candidateTemplate.send("candidate-update", UUID.randomUUID().toString(),
+                Gson().toJson(CandidateModel(
+                        event = Event.CREATE,
+                        recordId = 1,
+                        name = "Joe Programmer"
+                )))
+        candidateTemplate.send("candidate-update", UUID.randomUUID().toString(),
+                Gson().toJson(CandidateModel(
+                        event = Event.UPDATE,
+                        recordId = 1,
+                        name = "Java Programmer"
+                )))
+        candidateTemplate.send("candidate-update", UUID.randomUUID().toString(),
+                Gson().toJson(CandidateModel(
+                        event = Event.DELETE,
+                        recordId = 1
+                )))
+    }
+
+    //    @Test
     fun `test kafa publish`() {
 
         val producer = createProducer()
@@ -96,7 +126,8 @@ class TestKafka {
         props[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
         return props
     }
-//    @Test
+
+    //    @Test
     fun `test kafka using spring`() {
         LOGGER.info("Start auto")
         val containerProps = ContainerProperties("candidate-upate")
