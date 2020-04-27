@@ -29,6 +29,7 @@ dependencies {
     implementation("org.springframework.kafka:spring-kafka:2.4.5.RELEASE")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("com.ninja-squad:springmockk:1.1.3")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 configurations {
