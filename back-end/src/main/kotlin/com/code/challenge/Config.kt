@@ -1,5 +1,7 @@
 package com.code.challenge
 
+import com.code.challenge.jms.Audit
+import com.code.challenge.jms.CandidateModel
 import org.apache.kafka.clients.admin.AdminClientConfig
 import org.apache.kafka.clients.admin.NewTopic
 import org.apache.kafka.clients.consumer.ConsumerConfig
@@ -37,8 +39,6 @@ class Config {
     @Bean
     fun consumerConfigs(): Map<String, Any> {
         val props = mutableMapOf<String, Any>()
-//        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, embeddedKafka.getBrokersAsString())
-//        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092")
         props[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = bootstrapAddress
         props[ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG] = StringDeserializer::class.java
         props[ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG] = StringDeserializer::class.java
@@ -56,7 +56,7 @@ class Config {
     }
 
     @Bean
-    fun producerFactory(): ProducerFactory<String?, String?> {
+    fun candidateProducerFactory(): ProducerFactory<String, CandidateModel> {
         val configProps: MutableMap<String, Any> = HashMap()
         configProps[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = bootstrapAddress
         configProps[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
@@ -65,9 +65,24 @@ class Config {
     }
 
     @Bean
-    fun kafkaTemplate(): KafkaTemplate<String?, String?>? {
-        return KafkaTemplate(producerFactory())
+    fun auditProducerFactory(): ProducerFactory<String, String> {
+        val configProps: MutableMap<String, Any> = HashMap()
+        configProps[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = bootstrapAddress
+        configProps[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
+        configProps[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
+        return DefaultKafkaProducerFactory(configProps)
     }
+
+    @Bean("candidateTemplate")
+    fun candidateTemplate(): KafkaTemplate<String, CandidateModel> {
+        return KafkaTemplate(candidateProducerFactory())
+    }
+
+    @Bean("auditTemplate")
+    fun auditTemplate(): KafkaTemplate<String, String> {
+        return KafkaTemplate(auditProducerFactory())
+    }
+
     @Bean
     fun getRestTemplate(): RestTemplate{
         return RestTemplate()

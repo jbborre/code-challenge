@@ -34,7 +34,7 @@ class TestKafka {
         return KafkaProducer(props)
     }
 
-    @Test
+//    @Test
     fun `test kafa publish`() {
 
         val producer = createProducer()
@@ -96,7 +96,7 @@ class TestKafka {
         props[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
         return props
     }
-    @Test
+//    @Test
     fun `test kafka using spring`() {
         LOGGER.info("Start auto")
         val containerProps = ContainerProperties("candidate-upate")
